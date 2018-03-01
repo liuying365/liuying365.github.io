@@ -79,18 +79,23 @@
 
 
 
-<meta name="description" content="github需要注意的就是秘钥ssh 的生成和配置并建立远程io 仓库 本地hexo 第一步：创建一个hexo的文件夹 第二步：需要安装一些hexo依赖包  12npm install hexo-cli -gnpm install hexo --save  第三步：初始化hexo包  12hexo init -ynpm install  第四步：在浏览器中查看  12hexo ghexo s 在h">
+<meta name="description" content="github秘钥ssh 的生成 第一步：鼠标右键git bash here ，之后再控制终端上输入命令  1ssh-keygen -t rsa  第二步：三次回车键  注意一定要三次回车  第三步：查找生成的公钥  文件的位置在：C盘/用户名/.ssh  打开.shh文件夹  id_rsa.pub文件中的内容就是公钥  第四步：将生成的公钥，复制在github上  首先登录github后，点击头像">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo和github搭建博客">
 <meta property="og:url" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="github需要注意的就是秘钥ssh 的生成和配置并建立远程io 仓库 本地hexo 第一步：创建一个hexo的文件夹 第二步：需要安装一些hexo依赖包  12npm install hexo-cli -gnpm install hexo --save  第三步：初始化hexo包  12hexo init -ynpm install  第四步：在浏览器中查看  12hexo ghexo s 在h">
+<meta property="og:description" content="github秘钥ssh 的生成 第一步：鼠标右键git bash here ，之后再控制终端上输入命令  1ssh-keygen -t rsa  第二步：三次回车键  注意一定要三次回车  第三步：查找生成的公钥  文件的位置在：C盘/用户名/.ssh  打开.shh文件夹  id_rsa.pub文件中的内容就是公钥  第四步：将生成的公钥，复制在github上  首先登录github后，点击头像">
+<meta property="og:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/20160301175134.png">
+<meta property="og:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/20160301175134.png">
+<meta property="og:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/20160301175135.png">
+<meta property="og:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/20160301175136.png">
+<meta property="og:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/20160301181049.png">
 <meta property="og:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/1712159-9426f901de7b2a47.png">
-<meta property="og:updated_time" content="2018-03-01T09:31:51.834Z">
+<meta property="og:updated_time" content="2018-03-01T10:16:38.285Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo和github搭建博客">
-<meta name="twitter:description" content="github需要注意的就是秘钥ssh 的生成和配置并建立远程io 仓库 本地hexo 第一步：创建一个hexo的文件夹 第二步：需要安装一些hexo依赖包  12npm install hexo-cli -gnpm install hexo --save  第三步：初始化hexo包  12hexo init -ynpm install  第四步：在浏览器中查看  12hexo ghexo s 在h">
-<meta name="twitter:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/1712159-9426f901de7b2a47.png">
+<meta name="twitter:description" content="github秘钥ssh 的生成 第一步：鼠标右键git bash here ，之后再控制终端上输入命令  1ssh-keygen -t rsa  第二步：三次回车键  注意一定要三次回车  第三步：查找生成的公钥  文件的位置在：C盘/用户名/.ssh  打开.shh文件夹  id_rsa.pub文件中的内容就是公钥  第四步：将生成的公钥，复制在github上  首先登录github后，点击头像">
+<meta name="twitter:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/20160301175134.png">
 
 
 
@@ -186,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -196,7 +201,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -260,7 +265,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-27T12:58:24+08:00">
                 2016-02-27
@@ -300,8 +305,40 @@
       
 
       
-        <h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p>需要注意的就是秘钥<code>ssh</code> 的生成和配置并建立远程<code>io</code> 仓库</p>
-<h2 id="本地hexo"><a href="#本地hexo" class="headerlink" title="本地hexo"></a>本地hexo</h2><ul>
+        <h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><h3 id="秘钥ssh-的生成"><a href="#秘钥ssh-的生成" class="headerlink" title="秘钥ssh 的生成"></a>秘钥<code>ssh</code> 的生成</h3><ul>
+<li>第一步：鼠标右键<code>git bash here</code> ，之后再控制终端上输入命令</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+<ul>
+<li>第二步：三次回车键</li>
+</ul>
+<p>注意一定要三次回车</p>
+<ul>
+<li>第三步：查找生成的公钥</li>
+</ul>
+<p>文件的位置在：C盘/用户名/.ssh</p>
+<p><img src="/2016/02/27/hexo和github搭建博客/20160301175134.png" alt="20180301175134"></p>
+<p>打开.shh文件夹</p>
+<p><img src="/2016/02/27/hexo和github搭建博客/20160301175134.png" alt="20180301175134"></p>
+<p><code>id_rsa.pub</code>文件中的内容就是公钥</p>
+<ul>
+<li><p>第四步：将生成的公钥，复制在github上</p>
+<ul>
+<li>首先登录<code>github</code>后，点击头像右侧箭头点击<code>settings</code></li>
+</ul>
+<p><img src="/2016/02/27/hexo和github搭建博客/20160301175135.png" alt="20180301175134"></p>
+<ul>
+<li>点击<code>settings</code>在显示页面的<strong>左侧</strong>找到下面的指令点击</li>
+</ul>
+<p><img src="/2016/02/27/hexo和github搭建博客/20160301175136.png" alt="20160301175136"></p>
+<ul>
+<li>在<strong>右侧</strong>显示下面的内容</li>
+</ul>
+<p><img src="/2016/02/27/hexo和github搭建博客/20160301181049.png" alt="20160301181049"></p>
+</li>
+</ul>
+<p>这时给标题<code>title</code>随便起名字,<code>Key</code>中的内容就是刚刚<code>id_rsa.pub</code>文件中的内容，只要打开<code>id_rsa.pub</code>文件，全选复制粘贴过来，最后点击<code>add SSH key</code>就可以了。</p>
+<h3 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h3><h2 id="本地hexo"><a href="#本地hexo" class="headerlink" title="本地hexo"></a>本地hexo</h2><ul>
 <li>第一步：创建一个<code>hexo</code>的文件夹</li>
 <li>第二步：需要安装一些<code>hexo</code>依赖包</li>
 </ul>
@@ -428,10 +465,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -452,7 +489,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -488,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">1.</span> <span class="nav-text">github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地hexo"><span class="nav-number">2.</span> <span class="nav-text">本地hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地hexo和github的连接"><span class="nav-number">3.</span> <span class="nav-text">本地hexo和github的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在github上看博客"><span class="nav-number">4.</span> <span class="nav-text">在github上看博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写博客"><span class="nav-number">5.</span> <span class="nav-text">写博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">1.</span> <span class="nav-text">github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#秘钥ssh-的生成"><span class="nav-number">1.1.</span> <span class="nav-text">秘钥ssh 的生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立仓库"><span class="nav-number">1.2.</span> <span class="nav-text">建立仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地hexo"><span class="nav-number">2.</span> <span class="nav-text">本地hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地hexo和github的连接"><span class="nav-number">3.</span> <span class="nav-text">本地hexo和github的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在github上看博客"><span class="nav-number">4.</span> <span class="nav-text">在github上看博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写博客"><span class="nav-number">5.</span> <span class="nav-text">写博客</span></a></li></ol></div>
             
 
           </div>
@@ -518,7 +555,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
