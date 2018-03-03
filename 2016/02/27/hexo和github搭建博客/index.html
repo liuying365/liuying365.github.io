@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/20160303140017.png">
 <meta property="og:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/20180303140257.png">
 <meta property="og:image" content="http://yoursite.com/2016/02/27/hexo和github搭建博客/1712159-9426f901de7b2a47.png">
-<meta property="og:updated_time" content="2018-03-03T06:27:47.401Z">
+<meta property="og:updated_time" content="2018-03-03T10:47:32.174Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo和github搭建博客">
 <meta name="twitter:description" content="github秘钥ssh 的生成 第一步：鼠标右键git bash here ，之后再控制终端上输入命令  1ssh-keygen -t rsa  第二步：三次回车键  注意一定要三次回车  第三步：查找生成的公钥  文件的位置在：C盘/用户名/.ssh  打开.shh文件夹  id_rsa.pub文件中的内容就是公钥  第四步：将生成的公钥，复制在github上  首先登录github后，点击头像">
@@ -113,7 +113,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: 'Penulis'
     },
     algolia: {
       applicationID: '',
@@ -193,7 +193,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Beranda
           </a>
         </li>
       
@@ -203,7 +203,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Arsip
           </a>
         </li>
       
@@ -267,7 +267,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Diposting di</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-27T12:58:24+08:00">
                 2016-02-27
@@ -348,19 +348,23 @@
 <ul>
 <li>第三步：给仓库定义一个名字，并且需要将其设置为共有的<code>public</code> ，并设置存在默认的<code>README.md</code> 文件</li>
 </ul>
+<p>注意：<strong>如果是用来和博客联系的，名字必须是以<code>.github.io</code>结尾</strong> 。</p>
 <p><img src="/2016/02/27/hexo和github搭建博客/20180303140257.png" alt="20180303140257"></p>
 <ul>
 <li>第四步：点击<code>Create repository</code>， 完成仓库的创建</li>
 </ul>
-<h2 id="本地hexo"><a href="#本地hexo" class="headerlink" title="本地hexo"></a>本地hexo</h2><ul>
-<li>第一步：创建一个<code>hexo</code>的文件夹</li>
-<li>第二步：需要安装一些<code>hexo</code>依赖包</li>
+<h2 id="本地hexo"><a href="#本地hexo" class="headerlink" title="本地hexo"></a>本地hexo</h2><h3 id="了解一下hexo的命令"><a href="#了解一下hexo的命令" class="headerlink" title="了解一下hexo的命令"></a>了解一下hexo的命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 必须的，服务器有缓存，需要清理</span><br><span class="line">hexo g -d # 先生成再部署</span><br><span class="line">说明：这里的 g 和 d 都是简写，全拼是 generate 和 deploye，也可以分开执行</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="本地hexo-1"><a href="#本地hexo-1" class="headerlink" title="本地hexo"></a>本地hexo</h3><ul>
+<li>第一步：安装依赖包</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 <ul>
-<li>第三步：初始化<code>hexo</code>包</li>
+<li>第二步：创建一个<code>Hexo</code>的文件夹</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init -y</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<ul>
+<li>第三步：初始化<code>Hexo</code> 文件夹，并安装<code>hexo</code>的包，使用<code>git bash</code>控制台</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 <ul>
 <li>第四步：在浏览器中查看</li>
 </ul>
@@ -370,27 +374,43 @@
 <ul>
 <li><p>第五步：设置主题，（更换成<code>Next</code> 主题）</p>
 <ul>
-<li>第一步：下载<code>Next</code> 主题</li>
+<li>第一步：下载<code>Next</code> 主题，还在<code>git bash</code>控制台上直接输入下面的命令</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 <ul>
 <li>第二步：配置<code>_config.yml</code> 文件</li>
 </ul>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">hexo-theme-next</span> <span class="comment">## 主题设置</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span> <span class="comment">## 主题设置，主题的名字是`themes`文件夹中的子文件夹的名字</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>第三步：查看</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="本地hexo和github的连接"><a href="#本地hexo和github的连接" class="headerlink" title="本地hexo和github的连接"></a>本地hexo和github的连接</h2><p>这个连接主要是配置<code>hexo</code> 文件中的<code>_config.yml</code> 文件</p>
+<h2 id="本地hexo和github的连接"><a href="#本地hexo和github的连接" class="headerlink" title="本地hexo和github的连接"></a>本地hexo和github的连接</h2><ul>
+<li>第一步：在连接之前，首先安装依赖包</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<ul>
+<li>第二步：配置<code>Hexo</code> 文件中的<code>_config.yml</code> 文件</li>
+</ul>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>注意：这里的远程仓库名称必须是：<strong><code>github</code>的 <code>username.github.io</code>的形式，否则会显示空白页</strong></p>
 <p>比如我的仓库的地址是<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:liuying365/liuying365.github.io.git` ，所以配置如下</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:liuying365/liuying365.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<h2 id="在github上看博客"><a href="#在github上看博客" class="headerlink" title="在github上看博客"></a>在github上看博客</h2><p>也就是部署到github上，需要在<code>hexo</code> 中安装<code>hexo-generator-cname</code>包</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-cname --save</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 必须的，服务器有缓存，需要清理</span><br><span class="line">hexo g -d # 先生成再部署</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># 说明：这里的 g 和 d 都是简写，全拼是 generate 和 deploye，也可以分开执行</span><br><span class="line"><span class="meta">#</span> hexo g</span><br><span class="line"><span class="meta">#</span> hexo d</span><br></pre></td></tr></table></figure>
-<p>在直接输入网址<code>https://yourname.github.io</code> 查看。例如：我的网址是：<code>https://liuying365.github.io</code></p>
+<ul>
+<li><p>第三步：在<code>yourname.github.io</code> 上查看</p>
+<ul>
+<li>第一步：运行命令</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<ul>
+<li>第二步：在浏览器中查看</li>
+</ul>
+<p>直接在浏览器中输入<code>yourname.github.io</code> 访问，比如我的是<code>liuying365.github.io</code></p>
+</li>
+</ul>
+<h2 id="在github上看博客"><a href="#在github上看博客" class="headerlink" title="在github上看博客"></a>在github上看博客</h2><p>在直接输入网址<code>https://yourname.github.io</code> 查看。例如：我的网址是：<code>https://liuying365.github.io</code></p>
 <h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><p>使用<code>hexo</code> 和<code>GitHub</code> 创建博客，明确的几点：</p>
 <ul>
 <li>第一步：在本地写博客的内容</li>
@@ -495,10 +515,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Daftar Isi
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Ikhtisar
           </li>
         </ul>
       
@@ -519,7 +539,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posting</span>
                 </a>
               </div>
             
@@ -555,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">1.</span> <span class="nav-text">github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#秘钥ssh-的生成"><span class="nav-number">1.1.</span> <span class="nav-text">秘钥ssh 的生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立仓库"><span class="nav-number">1.2.</span> <span class="nav-text">建立仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地hexo"><span class="nav-number">2.</span> <span class="nav-text">本地hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地hexo和github的连接"><span class="nav-number">3.</span> <span class="nav-text">本地hexo和github的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在github上看博客"><span class="nav-number">4.</span> <span class="nav-text">在github上看博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写博客"><span class="nav-number">5.</span> <span class="nav-text">写博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#github"><span class="nav-number">1.</span> <span class="nav-text">github</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#秘钥ssh-的生成"><span class="nav-number">1.1.</span> <span class="nav-text">秘钥ssh 的生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立仓库"><span class="nav-number">1.2.</span> <span class="nav-text">建立仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地hexo"><span class="nav-number">2.</span> <span class="nav-text">本地hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#了解一下hexo的命令"><span class="nav-number">2.1.</span> <span class="nav-text">了解一下hexo的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地hexo-1"><span class="nav-number">2.2.</span> <span class="nav-text">本地hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地hexo和github的连接"><span class="nav-number">3.</span> <span class="nav-text">本地hexo和github的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在github上看博客"><span class="nav-number">4.</span> <span class="nav-text">在github上看博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写博客"><span class="nav-number">5.</span> <span class="nav-text">写博客</span></a></li></ol></div>
             
 
           </div>
@@ -585,7 +605,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -593,7 +613,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Tema &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 
