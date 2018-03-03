@@ -583,7 +583,19 @@
 </li>
 </ul>
 <p>这时给标题<code>title</code>随便起名字,<code>Key</code>中的内容就是刚刚<code>id_rsa.pub</code>文件中的内容，只要打开<code>id_rsa.pub</code>文件，全选复制粘贴过来，最后点击<code>add SSH key</code>就可以了。</p>
-<h3 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h3><h2 id="本地hexo"><a href="#本地hexo" class="headerlink" title="本地hexo"></a>本地hexo</h2><ul>
+<h3 id="建立仓库"><a href="#建立仓库" class="headerlink" title="建立仓库"></a>建立仓库</h3><ul>
+<li>第一步：登陆<code>github</code> 账号</li>
+<li>第二步：点击在页面的<strong>右上</strong>角的<code>+</code>，再点击选项中的<code>New repositry</code></li>
+</ul>
+<p><img src="/2016/02/27/hexo和github搭建博客/20160303140017.png" alt="20160303140017"></p>
+<ul>
+<li>第三步：给仓库定义一个名字，并且需要将其设置为共有的<code>public</code> ，并设置存在默认的<code>README.md</code> 文件</li>
+</ul>
+<p><img src="/2016/02/27/hexo和github搭建博客/20180303140257.png" alt="20180303140257"></p>
+<ul>
+<li>第四步：点击<code>Create repository</code>， 完成仓库的创建</li>
+</ul>
+<h2 id="本地hexo"><a href="#本地hexo" class="headerlink" title="本地hexo"></a>本地hexo</h2><ul>
 <li>第一步：创建一个<code>hexo</code>的文件夹</li>
 <li>第二步：需要安装一些<code>hexo</code>依赖包</li>
 </ul>
@@ -598,13 +610,29 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 <p>在<code>http://localhost:4000</code> 查看，如果出现页面，说明本地<code>hexo</code> 配置成功</p>
 <p><img src="/2016/02/27/hexo和github搭建博客/1712159-9426f901de7b2a47.png" alt="1712159-9426f901de7b2a47"></p>
+<ul>
+<li><p>第五步：设置主题，（更换成<code>Next</code> 主题）</p>
+<ul>
+<li>第一步：下载<code>Next</code> 主题</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<ul>
+<li>第二步：配置<code>_config.yml</code> 文件</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">hexo-theme-next</span> <span class="comment">## 主题设置</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>第三步：查看</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <h2 id="本地hexo和github的连接"><a href="#本地hexo和github的连接" class="headerlink" title="本地hexo和github的连接"></a>本地hexo和github的连接</h2><p>这个连接主要是配置<code>hexo</code> 文件中的<code>_config.yml</code> 文件</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:yourname/yourname.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 <p>比如我的仓库的地址是<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:liuying365/liuying365.github.io.git` ，所以配置如下</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:liuying365/liuying365.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 <h2 id="在github上看博客"><a href="#在github上看博客" class="headerlink" title="在github上看博客"></a>在github上看博客</h2><p>也就是部署到github上，需要在<code>hexo</code> 中安装<code>hexo-generator-cname</code>包</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-cname --save</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 必须的，服务器有缓存，需要清理</span><br><span class="line">hexo g -d # 先生成再部署</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 说明：这里的 g 和 d 都是简写，全拼是 generate 和 deploye，也可以分开执行</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> hexo g</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> hexo d</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 必须的，服务器有缓存，需要清理</span><br><span class="line">hexo g -d # 先生成再部署</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># 说明：这里的 g 和 d 都是简写，全拼是 generate 和 deploye，也可以分开执行</span><br><span class="line"><span class="meta">#</span> hexo g</span><br><span class="line"><span class="meta">#</span> hexo d</span><br></pre></td></tr></table></figure>
 <p>在直接输入网址<code>https://yourname.github.io</code> 查看。例如：我的网址是：<code>https://liuying365.github.io</code></p>
 <h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><p>使用<code>hexo</code> 和<code>GitHub</code> 创建博客，明确的几点：</p>
 <ul>
@@ -615,7 +643,7 @@
 <ul>
 <li>第二步：在网页中浏览自己编写的文章</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g   # 生成</span><br><span class="line">hexo s   # 启动服务</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># 启动服务之后，可以在 http://localhost:4000 查看</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g   # 生成</span><br><span class="line">hexo s   # 启动服务</span><br><span class="line"><span class="meta">#</span># 启动服务之后，可以在 http://localhost:4000 查看</span><br></pre></td></tr></table></figure>
 <ul>
 <li>第三步：将本地的代码部署到<code>github</code> 上</li>
 </ul>
